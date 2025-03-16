@@ -9,6 +9,7 @@
 <body>
     <div id="app">
         <h1>{{ message }}</h1>
+        <button @click="clickMe">Click Me</button>
     </div>
 
 
@@ -17,6 +18,12 @@
             data() {
                 return{
                     message: 'Hello World',
+                }
+            },
+
+            methods: {
+                clickMe() {
+                    this.message = 'Button Clicked'
                 }
             }
         });

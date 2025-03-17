@@ -64,3 +64,7 @@ var products = [
     }
 ];
  
+const SelfServiceMachine = {
+    
+}
+

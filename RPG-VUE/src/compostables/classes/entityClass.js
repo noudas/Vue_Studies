@@ -76,6 +76,4 @@ export class GeneralEntity{
     toString(){
         return this.name;
     }
-
-
 }

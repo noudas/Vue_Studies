@@ -23,6 +23,7 @@ const handlingForms = {
     methods: {
         addMember: function(){
             this.members.push(this.newMember);
+            this.newMember = {};
         }
     }
 };

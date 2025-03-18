@@ -7,6 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Band Members</title>
     </head>
@@ -18,15 +19,15 @@
             
 
             <h1>
-                Membros da Banda
+                Band Members
             </h1>
 
             <table>
                 <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Sobrenome</th>
-                    <th>Instrumento</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Instrument</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -39,24 +40,24 @@
             </table>
 
             <section class="add-more">
-                <p>Adicionar membros</p>
+                <p>Add members</p>
                 <form>
                 
-                <label for="fname">Nome:</label><br>
-                <input type="text" id="fname" name="fname"><br>
+                <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="fname" v-model="newMember.fname"><br>
                 
-                <label for="lname">Sobrenome:</label><br>
-                <input type="text" id="lname" name="lname"><br>
+                <label for="lname">Surname:</label><br>
+                <input type="text" id="lname" name="lname" v-model="newMember.lname"><br>
 
-                <label for="instrument">Instrumento:</label><br>
-                <select name="instrument" id="instrument">
+                <label for="instrument">Instrument:</label><br>
+                <select name="instrument" id="instrument" v-model="newMember.instrument">
                     <option value="Baixo">Baixo</option>
                     <option value="Guitarra">Guitarra</option>
                     <option value="Violão">Violão</option>
                     <option value="Bateria">Bateria</option>
                     </select>
                     <br><br>
-                <input type="button" value="Adicionar">
+                <input type="button" value="Adicionar" @click="addMember">
                 </form> 
             </section>
 

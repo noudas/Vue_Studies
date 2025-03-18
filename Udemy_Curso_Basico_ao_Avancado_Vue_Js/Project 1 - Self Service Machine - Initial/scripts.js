@@ -22,7 +22,7 @@ var products = [
     },
     {
         "photo": "img/fries.png",
-        "name": "Batata frita",
+        "name": "French Fries",
         "price": 2.99,
         "active": false,
         "quantity": 1
@@ -36,7 +36,7 @@ var products = [
     },
     {
         "photo": "img/salad.png",
-        "name": "Salada",
+        "name": "Salad",
         "price": 2.79,
         "active": false,
         "quantity": 1
@@ -57,7 +57,7 @@ var products = [
     },
     {
         "photo": "img/water.png",
-        "name": "Água",
+        "name": "Watah",
         "price": 1.49,
         "active": false,
         "quantity": 1
@@ -65,7 +65,7 @@ var products = [
 ];
  
 const SelfServiceMachine = {
-    data(){
+    data(){ 
         return {
             products: window.products
         }

@@ -69,6 +69,19 @@ const SelfServiceMachine = {
         return {
             products: window.products
         }
+    },
+
+    methods: {
+        total: function(){
+            let total = 0;
+
+            this.products.forEach(product => {
+                if(product.active){
+                    total += product.price * product.quantity;
+                }
+            });
+            return total
+        }
     }
 };
 

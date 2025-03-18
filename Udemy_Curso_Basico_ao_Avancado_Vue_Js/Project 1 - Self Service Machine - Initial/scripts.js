@@ -66,8 +66,8 @@ var products = [
  
 const SelfServiceMachine = {
     data(){
-        return{
-            message: "Hello World"
+        return {
+            products: window.products
         }
     }
 };

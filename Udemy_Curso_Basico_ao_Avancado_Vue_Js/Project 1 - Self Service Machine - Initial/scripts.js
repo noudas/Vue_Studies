@@ -80,7 +80,7 @@ const SelfServiceMachine = {
                     total += product.price * product.quantity;
                 }
             });
-            return total
+            return total.toFixed(2);
         }
     }
 };

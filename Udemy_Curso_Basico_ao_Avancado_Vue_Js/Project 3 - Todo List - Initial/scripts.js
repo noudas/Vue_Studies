@@ -45,9 +45,18 @@ const handleTodos = {
     },
     beforeUpdate(){
         console.log('beforeUpdate')
-        console.log('Changed data');
+        console.log('Before Updating the data');
         console.log(this.todos);
         console.log("---------------------");
+    },
+    updated(){
+        console.log('updated');
+        console.log('After Updating the data');
+        console.log(this.todos);
+
+        localStorage.setItem(`todos`, JSON.stringify(this.todos));
+        console.log('Data saved to LocalStorage');
+        
     }
 };
 

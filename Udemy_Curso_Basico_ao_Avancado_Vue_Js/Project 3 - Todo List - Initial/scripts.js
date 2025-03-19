@@ -28,11 +28,13 @@ const handleTodos = {
         }
     },
     beforeCreate(){
+        console.log("---------------------");
         console.log('beforeCreate')
         console.log(this.todos);
         console.log("---------------------");
     },
     created(){
+        console.log("---------------------");
         console.log('created')
         console.log(this.todos);
         
@@ -44,18 +46,21 @@ const handleTodos = {
         console.log("---------------------");
     },
     beforeUpdate(){
+        console.log("---------------------");
         console.log('beforeUpdate')
         console.log('Before Updating the data');
         console.log(this.todos);
         console.log("---------------------");
     },
     updated(){
+        console.log("---------------------");
         console.log('updated');
         console.log('After Updating the data');
         console.log(this.todos);
 
         localStorage.setItem(`todos`, JSON.stringify(this.todos));
         console.log('Data saved to LocalStorage');
+        console.log("---------------------");
         
     }
 };

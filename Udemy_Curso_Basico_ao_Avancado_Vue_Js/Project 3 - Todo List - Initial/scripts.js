@@ -26,6 +26,15 @@ const handleTodos = {
         clearAllTodo() {
             this.todos = [];
         }
+    },
+    beforeCreate(){
+        console.log('beforeCreate')
+    },
+    created(){
+        console.log('created')
+    },
+    beforeUpdate(){
+        console.log('beforeUpdate')
     }
 };
 

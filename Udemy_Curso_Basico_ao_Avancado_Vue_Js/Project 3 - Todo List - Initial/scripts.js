@@ -16,7 +16,10 @@ const handleTodos = {
                     text: this.newTodo.text,
                     done: !!this.newTodo.done
                  });
+                 localStorage.setItem('todos', JSON.stringify(this.todos))
                 this.newTodo.text = '';
+            } else {
+                alert('Campo vazio');
             }
         },
 

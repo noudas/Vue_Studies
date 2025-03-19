@@ -25,6 +25,10 @@ const handleTodos = {
 
         clearAllTodo() {
             this.todos = [];
+        },
+        storeTodos(){
+            localStorage.setItem('todos', JSON.stringify(this.todos));
+            console.log('Data saved to LocalStorage via Function');
         }
     },
     beforeCreate(){

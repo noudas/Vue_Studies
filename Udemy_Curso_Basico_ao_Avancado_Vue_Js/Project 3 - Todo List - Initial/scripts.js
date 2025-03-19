@@ -29,12 +29,25 @@ const handleTodos = {
     },
     beforeCreate(){
         console.log('beforeCreate')
+        console.log(this.todos);
+        console.log("---------------------");
     },
     created(){
         console.log('created')
+        console.log(this.todos);
+        
+        console.log('Fetching LocalStorage');
+        
+        this.todos = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem(`todos`)) : this.todos;
+        console.log('Fetched data from LocalStorage');
+        console.log(this.todos);
+        console.log("---------------------");
     },
     beforeUpdate(){
         console.log('beforeUpdate')
+        console.log('Changed data');
+        console.log(this.todos);
+        console.log("---------------------");
     }
 };
 

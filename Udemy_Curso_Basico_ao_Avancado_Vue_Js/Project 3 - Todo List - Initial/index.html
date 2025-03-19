@@ -24,7 +24,7 @@
                 <div class="all-todos" v-for="todo in todos">
                     <div 
                     class="single-todo"
-                    @click="todo.done = !todo.done; storeTodos"
+                    @click="todo.done = !todo.done"
                     :class="{done : todo.done}">
                         <p>{{ todo.text }}</p>
                     </div>
@@ -32,12 +32,12 @@
                 </div>
 
                 <button class="clear"
-                    @click="clearAllTodo; storeTodos"
+                    @click="clearAllTodo(), storeTodos()"
                     v-show="todos.length > 0"
                 >Limpar tudo</button>
 
                 <input type="text" placeholder="Escreva uma nova tarefa..." v-model="newTodo.text">
-                <button class="add" @click="addTodo; storeTodos">Adicionar</button>
+                <button class="add" @click="addTodo(),storeTodos()">Adicionar</button>
 
                 <div class="instructions">
                     Instruções:
